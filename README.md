@@ -13,10 +13,18 @@ This project has designed to demonstrate understanding of design patterns and so
 architecture, while also providing a meaningful outcome.
 The following sections will give an overview of the important project components.
 
+### Technology List
+* Azure Cloud
+* MS SQL (SQL Server)
+* Java + JavaFX
+* SOAP
+* HTK Speech Recognition Framework
+* Git (of course) 
+
 ### Online Functionality
 
 The Tatai application features online fuctionality implemented through Azure web services.
-3 Tier Architecture has been implemented using SQL Server and a SOAP API deployed on the 
+3 Tier Architecture has been implemented using a SQL Server Database and a SOAP API deployed on the 
 Azure cloud, which provides functionality for multiplayer gameplay, user management,
 leaderboards and more.
  
@@ -35,4 +43,9 @@ Server-side processing has been used as much as possible to prevent tampering wi
 game data, making it impossible to illegally alter multiplayer scores.
 An important feature here is that all SPEECH/AUDIO data is sent as a byte stream to the
 Azure API, where the speech recognition software is hosted. This also prevents the illegal distribution
-of the HTK software.  
+of the HTK software.
+
+## Running
+
+To run the Tatai! application, clone repo and open the "Game" folder
+Click the start script.  
