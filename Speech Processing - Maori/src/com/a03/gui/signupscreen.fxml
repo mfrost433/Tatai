@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a03.gui.controller.SignUpController">
+   <children>
+      <ImageView fitHeight="504.0" fitWidth="680.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@bluePattern.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane" layoutX="198.0" layoutY="152.0" prefHeight="200.0" prefWidth="285.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="152.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="152.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXPasswordField fx:id="password" layoutX="65.0" layoutY="69.0" onKeyReleased="#checkPass" promptText="Password" />
+            <JFXTextField fx:id="username" layoutX="65.0" layoutY="27.0" onKeyReleased="#checkUser" promptText="Username" />
+            <JFXButton fx:id="signUp" buttonType="RAISED" layoutX="94.0" layoutY="181.0" onAction="#signUp" prefHeight="34.0" prefWidth="78.0" stylesheets="@button.css" text="Sign Up" textFill="WHITE" />
+            <JFXPasswordField fx:id="confirmPass" layoutX="65.0" layoutY="110.0" onKeyReleased="#checkPass" promptText="Confirm Password" />
+            <Label fx:id="validText" layoutX="235.0" layoutY="37.0" text="X" />
+            <JFXButton fx:id="back" buttonType="RAISED" layoutX="246.0" layoutY="182.0" onAction="#back" prefHeight="34.0" prefWidth="30.0" stylesheets="@button.css" text="&lt;" textFill="WHITE" />
+            <Label fx:id="alertText" alignment="CENTER" layoutX="21.0" layoutY="149.0" prefHeight="16.0" prefWidth="233.0" text="Username already in use" textFill="RED">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <JFXSpinner fx:id="spinner" layoutX="238.0" layoutY="119.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

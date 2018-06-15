@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a03.gui.controller.InstructionScreenController">
+   <children>
+      <ImageView fitHeight="504.0" fitWidth="680.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@bluePattern.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane" layoutX="839.0" layoutY="51.0" style="-fx-background-color: #ffffff; -fx-border-color: #2196f3;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <Pane layoutX="42.0" layoutY="36.0" prefHeight="328.0" prefWidth="513.0">
+                     <children>
+                        <AnchorPane layoutX="-25.0" layoutY="-15.0" prefHeight="344.0" prefWidth="384.0">
+                           <children>
+                              <Label fx:id="numberText" alignment="CENTER" layoutX="-1.0" layoutY="82.0" prefHeight="90.0" prefWidth="386.0" text="5 - 4" textFill="#2196f3">
+                                 <font>
+                                    <Font size="74.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="mainText" alignment="CENTER" layoutX="2.0" layoutY="196.0" prefHeight="100.0" prefWidth="381.0" textFill="#2196f3">
+                                 <font>
+                                    <Font name="DejaVu Sans Bold" size="32.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="tryAgain" buttonType="RAISED" layoutX="46.0" layoutY="38.0" stylesheets="@button.css" text="Try Again" textFill="WHITE" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="38.0">
+                                 <font>
+                                    <Font name="DejaVu Sans Bold" size="13.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Press this button to do another level of the same difficulty." />
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="nextLevel" buttonType="RAISED" layoutX="246.0" layoutY="38.0" stylesheets="@button.css" text="Next Level" textFill="WHITE" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="38.0">
+                                 <font>
+                                    <Font name="DejaVu Sans Bold" size="13.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="If you get more than 8/10 answers correct, this button will advance you to the next level!" />
+                                 </tooltip>
+                              </JFXButton>
+                              <ImageView fx:id="correctImage" fitHeight="73.0" fitWidth="80.0" layoutX="153.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@correctImage.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="incorrectImage" fitHeight="73.0" fitWidth="80.0" layoutX="78.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@incorrectImage.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="91.0" layoutY="205.0" prefHeight="52.0" prefWidth="48.0" text=" ">
+                                 <tooltip>
+                                    <Tooltip text="This icon will appear if your answer to the question is incorrect." />
+                                 </tooltip>
+                              </Label>
+                              <Label layoutX="166.0" layoutY="211.0" prefHeight="46.0" prefWidth="48.0" text=" ">
+                                 <tooltip>
+                                    <Tooltip text="This icon will appear if your response is correct!" />
+                                 </tooltip>
+                              </Label>
+                              <Label layoutX="106.0" layoutY="99.0" prefHeight="73.0" prefWidth="175.0" text=" ">
+                                 <tooltip>
+                                    <Tooltip autoFix="false" consumeAutoHidingEvents="false" hideOnEscape="false" text="Say the answer to this math equation in Maori, and submit the answer. If you say it right, you get a point!" />
+                                 </tooltip>
+                              </Label>
+                              <JFXButton fx:id="back" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="-1.0" layoutY="154.0" onAction="#back" prefHeight="29.0" prefWidth="40.0" ripplerFill="#916614" stylesheets="@button.css" text="&lt;" textFill="WHITE">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="306.0" layoutY="130.0" prefHeight="123.0" prefWidth="199.0" style="-fx-text-fill: #2196f3;" text="Hover over the button or icon you are interested in understanding for a tooltip!" wrapText="true">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <AnchorPane layoutX="20.0" layoutY="341.0" prefHeight="46.0" prefWidth="561.0">
+                     <children>
+                        <JFXButton fx:id="recordButton" buttonType="RAISED" layoutX="10.0" layoutY="-40.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="80.0" prefWidth="80.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text=" ">
+                           <graphic>
+                              <AnchorPane prefHeight="92.0" prefWidth="77.0">
+                                 <children>
+                                    <ImageView fx:id="mic" fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="25.0">
+                                       <image>
+                                          <Image url="@microphone1600.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip fx:id="micTip" text="Press this button to record the word displayed in the center" />
+                           </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="playButton" buttonType="RAISED" layoutX="150.0" layoutY="-40.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onMouseEntered="#mouseOverSpeaker" onMouseExited="#mouseExitSpeaker" prefHeight="80.0" prefWidth="80.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text=" ">
+                           <graphic>
+                              <AnchorPane disable="true" prefHeight="85.0" prefWidth="72.0">
+                                 <children>
+                                    <ImageView fx:id="speaker" fitHeight="49.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="20.0">
+                                       <image>
+                                          <Image url="@speaker1600.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Press this button to hear the audio you just recorded!" />
+                           </tooltip>
+                        </JFXButton>
+                        <JFXButton fx:id="submitButton" buttonType="RAISED" layoutX="290.0" layoutY="-40.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onMouseEntered="#mouseOverTick" onMouseExited="#mouseExitTick" prefHeight="80.0" prefWidth="80.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text=" ">
+                           <graphic>
+                              <AnchorPane prefHeight="98.0" prefWidth="77.0">
+                                 <children>
+                                    <ImageView fx:id="tick" fitHeight="40.0" fitWidth="40.0" layoutX="12.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="29.0">
+                                       <image>
+                                          <Image url="@Yes-512.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Press this button to submit your response, and check if it is correct!" />
+                           </tooltip>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="411.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="175.0" style="-fx-border-radius: 1; -fx-border-width: 5;">
+                     <children>
+                        <Label fx:id="sideText" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="3.0" layoutY="29.0" prefHeight="108.0" prefWidth="162.0" style="-fx-border-color: #2196f3; -fx-border-width: 5; -fx-border-radius: 10; -fx-background-color: #2196f3; -fx-background-radius: 10;" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="DejaVu Sans Bold" size="13.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <tooltip>
+                              <Tooltip text="This panel displays the current statistics of the game. These include the current level, question and number of correct/incorrect answers!" />
+                           </tooltip>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <AnchorPane fx:id="pane2" layoutX="126.0" layoutY="101.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="428.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Pane layoutX="115.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" />
+            <Pane layoutX="58.0" layoutY="-50.0" prefHeight="101.0" prefWidth="312.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #2196f3; -fx-border-width: 5; -fx-border-radius: 7; -fx-background-radius: 10;">
+               <children>
+                  <ImageView fitHeight="91.0" fitWidth="170.0" layoutX="136.0" layoutY="5.0" style="-fx-opacity: 1;">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="15.0" layoutY="32.0" prefHeight="36.0" prefWidth="124.0" text="How to play">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <AnchorPane layoutX="52.0" layoutY="69.0" prefHeight="180.0" prefWidth="325.0" style="-fx-background-color: #2196f3; -fx-background-radius: 6; -fx-border-radius: 6;">
+               <children>
+                  <Label alignment="CENTER" layoutX="11.0" layoutY="-5.0" prefHeight="91.0" prefWidth="304.0" style="-fx-background-radius: 6; -fx-background-radius: 6;" text="Tatai is a numeracy aid for the Maori language. Select a mode, easy or hard. You will see a mathematical equation; say the answer in Maori to get a point!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="12.0" layoutY="70.0" prefHeight="117.0" prefWidth="304.0" style="-fx-background-radius: 6; -fx-background-radius: 6;" text="In the multiplayer lobby, challenge a friend or a random player. To accept a challenge, click active games. To see a game result, look at the finished games page. Until your opponent has finished, there will be a question mark next to their score!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <JFXButton fx:id="exitButton2" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="188.0" layoutY="267.0" onAction="#exit" prefHeight="29.0" prefWidth="53.0" ripplerFill="#916614" stylesheets="@button.css" text="Exit" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutX="67.0" layoutY="320.0" prefHeight="48.0" prefWidth="294.0" style="-fx-background-color: #ffffff; -fx-border-color: #2196f3; -fx-background-radius: 6; -fx-border-radius: 6;">
+               <children>
+                  <JFXButton fx:id="example" alignment="CENTER" buttonType="RAISED" layoutX="149.0" layoutY="9.0" onAction="#toExample" prefHeight="31.0" prefWidth="131.0" stylesheets="@button.css" text="Example Screen" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="pronunciations" alignment="CENTER" buttonType="RAISED" layoutX="14.0" layoutY="9.0" onAction="#toPronunciations" prefHeight="31.0" prefWidth="124.0" stylesheets="@button.css" text="Pronunciations" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="12.0" />
+                     </font></JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Pane fx:id="pronouncePane" layoutX="-601.0" layoutY="51.0" prefHeight="412.0" prefWidth="479.0" style="-fx-background-color: #ffffff; -fx-border-color: #2196f3;">
+         <children>
+            <JFXButton fx:id="right1" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="433.0" layoutY="192.0" onAction="#right" prefHeight="29.0" prefWidth="32.0" ripplerFill="#916614" stylesheets="@button.css" text="&gt;" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="14.0" prefHeight="32.0" prefWidth="458.0" style="-fx-background-color: #2196f3; -fx-border-color: #2196f3; -fx-border-radius: 3; -fx-background-radius: 3; -fx-border-width: 3;" text="Press a number to hear its Maori pronunciation" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="43.0" layoutY="60.0" prefHeight="328.0" prefWidth="369.0" style="-fx-border-color: #2196f3; -fx-background-radius: 6; -fx-border-radius: 6; -fx-border-width: 4; -fx-background-color: #FFFFFF;">
+               <children>
+                  <JFXButton fx:id="nine" buttonType="RAISED" layoutX="273.0" layoutY="168.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#nine" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="9">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="six" buttonType="RAISED" layoutX="273.0" layoutY="88.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#six" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="6">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="five" buttonType="RAISED" layoutX="149.0" layoutY="88.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#five" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="5">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="one" buttonType="RAISED" layoutX="26.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#one" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="1">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="two" buttonType="RAISED" layoutX="149.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#two" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="2">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="eight" buttonType="RAISED" layoutX="149.0" layoutY="168.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#eight" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="8">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="seven" buttonType="RAISED" layoutX="26.0" layoutY="168.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#seven" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="7">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="four" buttonType="RAISED" layoutX="26.0" layoutY="88.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#four" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="4">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="three" buttonType="RAISED" layoutX="273.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#three" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="3">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="ten" buttonType="RAISED" layoutX="149.0" layoutY="249.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="20.0" onAction="#ten" onMouseEntered="#mouseOverMic" onMouseExited="#mouseExitMic" prefHeight="70.0" prefWidth="70.0" ripplerFill="#916614" style="-fx-background-radius: 100;" stylesheets="@button.css" text="10">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

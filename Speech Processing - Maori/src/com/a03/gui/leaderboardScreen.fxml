@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.45" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a03.gui.controller.LeaderboardController">
+   <children>
+      <ImageView fitHeight="504.0" fitWidth="680.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@bluePattern.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane" layoutX="95.0" layoutY="68.0" prefHeight="368.0" prefWidth="490.0" style="-fx-background-color: #ffffff; -fx-border-color: #2196f3;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXTextField fx:id="searchBar" layoutX="24.0" layoutY="29.0" onInputMethodTextChanged="#search" onKeyPressed="#search" onKeyReleased="#search" onKeyTyped="#search" promptText="Search by username" />
+            <TableView fx:id="table" layoutX="24.0" layoutY="69.0" prefHeight="272.0" prefWidth="445.0">
+              <columns>
+                <TableColumn fx:id="username" prefWidth="131.0" text="Username" />
+                <TableColumn fx:id="correct" prefWidth="75.0" text="# Correct" />
+                  <TableColumn fx:id="incorrect" prefWidth="93.0" text="# Incorrect" />
+                  <TableColumn fx:id="percent" prefWidth="69.0" text="\% Correct" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXButton fx:id="backButton" buttonType="RAISED" layoutX="438.0" layoutY="20.0" onAction="#back" prefHeight="25.0" prefWidth="32.0" stylesheets="@button.css" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

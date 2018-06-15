@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+
+.default-color0.chart-bar {
+    -fx-bar-fill: #FFFFFF; 
+    }
+.default-color1.chart-bar { 
+    -fx-bar-fill: #00FFCC; 
+    }

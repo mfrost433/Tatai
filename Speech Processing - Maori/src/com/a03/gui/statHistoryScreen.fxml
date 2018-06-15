@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a03.gui.controller.StatHistoryScreenController">
+   <children>
+      <ImageView fitHeight="504.0" fitWidth="680.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@bluePattern.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane" layoutX="69.0" layoutY="74.0" prefHeight="354.0" prefWidth="562.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <AnchorPane layoutX="145.0" layoutY="14.0" prefHeight="336.0" prefWidth="441.0">
+               <children>
+                  <StackedBarChart fx:id="chart" layoutX="57.0" prefHeight="327.0" prefWidth="345.0" title="\% Correct">
+                     <xAxis>
+                        <CategoryAxis label="Numbers" side="BOTTOM" fx:id="xAxis" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yAxis" autoRanging="false" minorTickCount="10" prefHeight="290.0" prefWidth="28.0" side="LEFT" tickLabelGap="5.0" tickUnit="10.0">
+                           <tickLabelFont>
+                              <Font size="14.0" />
+                           </tickLabelFont>
+                        </NumberAxis>
+                     </yAxis>
+                  </StackedBarChart>
+                  <JFXButton fx:id="returnButton" buttonType="RAISED" layoutX="345.0" layoutY="302.0" onAction="#returnToMenu" stylesheets="@button.css" text="Return" textFill="WHITE" />
+                  <Label fx:id="statLabel" layoutX="-110.0" layoutY="213.0" prefHeight="47.0" prefWidth="215.0" text="Correct Answers: &#9;10&#10;Incorrect Answers:&#9;10&#10;Total Answered:&#9;20&#10;" />
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>
